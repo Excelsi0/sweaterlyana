@@ -1,0 +1,35 @@
+.control
+    list-style: none
+    li
+        position: absolute
+        z-index: 99
+        top: 50%
+        left: -2%
+        cursor: pointer
+        border-radius: 50%
+        transition: transform .2s linear
+        img
+            width: 5rem
+            height: 5rem
+        &:hover
+            transform: scale(1.1)
+            box-shadow: 0 0 2rem #fff
+        &:active
+            transform: scale(1)
+    .next
+        left: auto
+        right: -2%
+.tns-nav
+    text-align: center
+    font-size: 100%
+.tns-nav button
+    height: 2rem
+    width: 2rem
+    border: 0
+    border-radius: 50%
+    margin: 0 .5rem
+    background-color: #e6962d
+
+.tns-nav .tns-nav-active
+    box-shadow: 0 0 2rem
+    background-color: #ffff
