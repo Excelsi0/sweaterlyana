@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             1201: {
                 items: 4,
-                
+
             }
         }
     });
@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.shop__wrapper');
 
     sliderContainer.addEventListener('mouseover', function () {
-        slider1.pause(); 
+        slider1.pause();
     });
     sliderContainer.addEventListener('mouseout', function () {
-        slider1.play(); 
+        slider1.play();
     });
 
     // вторая карусель
@@ -63,21 +63,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 controls: true,
             },
             1201: {
-                items: 4,      
+                items: 4,
             }
         }
     });
-    
+
     // остановка карусели при наведении мыши
     const slider2Container = document.querySelector('.shop__wrapper-carousel');
 
     slider2Container.addEventListener('mouseover', function () {
-        slider2.pause(); 
+        slider2.pause();
     });
     slider2Container.addEventListener('mouseout', function () {
-        slider2.play(); 
+        slider2.play();
+    });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.header__menu'),
+        menuItem = document.querySelectorAll('.header__link'),
+        hamburger = document.querySelector('.header__hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('header__hamburger_active');
+        menu.classList.toggle('header__menu_active');
     });
 
-    
-});
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('header__hamburger_active');
+            menu.classList.toggle('header__menu_active');
+        })
+    })
+})
 
