@@ -1,6 +1,9 @@
 .shop
     padding: 5.5rem 0
     &__buy
+        display: flex
+        justify-content: center
+        align-items: center
         width: 26.8rem
     &__name-cloth
         margin-top: 3.8rem
@@ -12,13 +15,17 @@
         font-weight: 600
         font-size: 1.5rem
         color: #fff
-
+    &__short-description, &__name-cloth
+        display: block
+        margin: 2rem auto 0
+        width: 26.8rem
     &__prices
         display: flex
-        margin-top: .5rem
-        width: 100%
-        justify-content: space-between
+        margin: .5rem auto 0
+        width: 26.8rem
+        justify-content: flex-end
         align-items: center
+        gap: 1rem
     &__old-price
         font-weight: 400
         font-size: 1.5rem

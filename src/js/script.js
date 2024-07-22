@@ -10,6 +10,23 @@ document.addEventListener('DOMContentLoaded', function () {
         controlsContainer: '#custom-control2',
         autoplayButtonOutput: false,
         navAsThumbnails: true,
+        responsive: {
+            0: {
+                items: 1,
+                controls: false,
+            },
+            540: {
+                items: 2,
+            },
+            840: {
+                items: 3,
+                controls: true,
+            },
+            1201: {
+                items: 4,
+                
+            }
+        }
     });
 
     // остановка карусели при наведении мыши
@@ -33,6 +50,22 @@ document.addEventListener('DOMContentLoaded', function () {
         controlsContainer: '#custom-control',
         autoplayButtonOutput: false,
         navAsThumbnails: true,
+        responsive: {
+            0: {
+                items: 1,
+                controls: false,
+            },
+            540: {
+                items: 2,
+            },
+            840: {
+                items: 3,
+                controls: true,
+            },
+            1201: {
+                items: 4,      
+            }
+        }
     });
     
     // остановка карусели при наведении мыши
