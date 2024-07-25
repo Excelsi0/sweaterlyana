@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         controlsContainer: '#custom-control2',
         autoplayButtonOutput: false,
         navAsThumbnails: true,
+        // autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 1,
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         controlsContainer: '#custom-control',
         autoplayButtonOutput: false,
         navAsThumbnails: true,
+        // autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 1,
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // остановка карусели при наведении мыши
+        // остановка карусели при наведении мыши
     const slider2Container = document.querySelector('.shop__wrapper-carousel');
 
     slider2Container.addEventListener('mouseover', function () {
@@ -77,23 +79,99 @@ document.addEventListener('DOMContentLoaded', function () {
     slider2Container.addEventListener('mouseout', function () {
         slider2.play();
     });
-});
 
-window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.header__menu'),
-        menuItem = document.querySelectorAll('.header__link'),
-        hamburger = document.querySelector('.header__hamburger');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('header__hamburger_active');
-        menu.classList.toggle('header__menu_active');
+    const slider3 = tns({
+        container: '.together__carousel',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        controls: false,
+        nav: false,
+        autoplayButton: false,
+        autoplayButtonOutput: false,
+
     });
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
+    window.addEventListener('DOMContentLoaded', () => {
+        const menu = document.querySelector('.header__menu'),
+            menuItem = document.querySelectorAll('.header__link'),
+            hamburger = document.querySelector('.header__hamburger');
+
+        hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('header__hamburger_active');
             menu.classList.toggle('header__menu_active');
+        });
+
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('header__hamburger_active');
+                menu.classList.toggle('header__menu_active');
+            })
         })
     })
+    //modal
+    $("[data-modal=consultation]").on("click", function () {
+        $(".overlay, #consultation").fadeIn();
+    });
+    $(".modal__close").on("click", function () {
+        $(".overlay, #consultation, #thanks").fadeOut();
+    });
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите {0} символа!"),
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адрес почты",
+                },
+            },
+        });
+    }
+
+    validateForms("#consultation form");
+
+    $("input[name=phone]").mask("+7 (999) 999-99-99");
+
+    $("form").submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize(),
+        }).done(function () {
+            $(this).find("input").val("");
+            $("#consultation").fadeOut();
+            $(".overlay, #thanks").fadeIn("slow");
+
+            $("form").trigger("reset");
+        });
+        return false;
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $(".pageup").fadeIn();
+        } else {
+            $(".pageup").fadeOut();
+        }
+    });
+    new WOW().init();
 })
 

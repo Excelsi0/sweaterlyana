@@ -19,7 +19,7 @@
         display: none
 @media (max-width: 767px)
     .header
-        position: relative
+        position: fixed
 
         &__menu
             position: fixed
@@ -66,8 +66,18 @@
                     &:nth-child(3)
                         transform: rotate(45deg)
 
+    .reviews
+        &__wrap
+            flex-wrap: wrap
+        &__img
+            margin: 0 auto
+        &__name, &__text
+            text-align: left
+
 @media (max-width: 576px)
     .promo
+        padding-top: 18rem
+        height: 60rem
         &__text
             font-size: 2.8rem
             text-align: center
@@ -80,3 +90,21 @@
         &__buttons
             margin: 3rem auto 0
             width: 32rem
+
+    .together
+        &__subtitle
+            top: 38rem
+    .footer
+        &__descr
+            width: 32rem
+    .overlay
+        .modal
+            padding: 2.8rem 1rem 4rem 1rem
+            min-width: 30rem
+            &__close
+                display: flex
+                justify-content: center
+                align-items: center
+                top: .3rem
+                right: .5rem
+                color: #000

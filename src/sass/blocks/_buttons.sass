@@ -11,6 +11,7 @@
     border: 0
     border-radius: .8rem
     box-shadow: 0 0 2rem #969696
+    background-color: #fff
 
     transition: box-shadow .2s linear, transform .3s linear
 
@@ -19,3 +20,32 @@
         transform: scale(1.05)
     &:active
         transform: scale(1)
+
+    &_link
+        text-decoration: none
+
+    &_order
+        position: absolute
+        bottom: 5%
+        left: 50%
+        transform: translateX(-50%)
+        width: 28rem
+        height: 8rem
+        font-size: 3.5rem
+        color: #921b1b
+        &:hover
+            box-shadow: 0 0 2rem #959595
+            transform: translateX(-50%) scale(1.01)
+        &:active
+            transform: translateX(-50%) scale(1)
+    &_social
+        margin: 3rem auto 0
+        box-shadow: 0 0 2rem #969696
+        background-color: #fff
+        &:hover
+            box-shadow: 0 0 2rem #969696
+    &_submit
+        box-shadow: 0 0 1rem #bbbbbb
+        background-color: #fff
+        &:hover
+            box-shadow: 0 0 2rem #bbbbbb

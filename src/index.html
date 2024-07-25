@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
     <div class="container">
         <header class="header">
-            <div class="header__brand">SweaterLyana</div>
-            <menu class="header__menu">
+            <div class="header__brand"><a href="#id__promo">SweaterLyana</a></div>
+            <div class="header__menu">
                 <a class="header__link" href="#id__promo">HOME</a>
                 <a class="header__link" href="#shop-women">women</a>
                 <a class="header__link" href="#shop-man">men</a>
 
-                <a class="header__link" href="#">reviews</a>
-                <a class="header__link" href="#">information</a>
-                <a class="header__link" href="#">order</a>
-            </menu>
+                <a class="header__link" href="#id__reviews">reviews</a>
+                <a class="header__link" href="#id__information">information</a>
+                <a data-modal="consultation" class="header__link" href="#">order</a>
+            </div>
             <div class="header__hamburger">
                 <span></span>
                 <span></span>
@@ -38,8 +40,8 @@
             <h1>СВИТЕР</h1>
             <h2>An exclusive trend for this season.</h2>
             <div class="promo__buttons">
-                <button class="button">Каталог</button>
-                <button class="button">Консультация</button>
+                <a class="button button_link" href="#shop-women">Каталог</a>
+                <button data-modal="consultation" class="button">Консультация</button>
             </div>
 
         </div>
@@ -47,20 +49,16 @@
 
     <div class="photo-exhibition">
         <div class="container">
-            <div class="photo-exhibition__wrapper">
-                <div class="photo-exhibition__photo-wrapper">
-                    <div class="photo-exhibition__upper-photo"><img src="img/woman/photo_up.jpeg" alt="woman"></div>
-                    <div class="photo-exhibition__down-photos">
-                        <div class="photo-exhibition__down-photo"><img src="img/man/bodrow.jpg" alt=""></div>
-                        <div class="photo-exhibition__down-photo "><img src="img/woman/woman-down.jpg" alt=""></div>
-                    </div>
-
+            <div class="photo-exhibition__wrapper animate__bounceInLeft animate__animated wow" data-wow-duration="2s">
+                <div class="photo-exhibition__photo-wrapper" >
+                    <img src="img/photo-ex.jpeg" alt="">
                 </div>
                 <div class="photo-exhibition__photo-wrapper 
                 photo-exhibition__photo-wrapper_media-hide"><img src="img/li.jpg" alt=""></div>
             </div>
         </div>
     </div>
+
     <section class="shop" id="shop-women">
         <div class="container">
             <h2 class="title">WOMEN’S FASHION</h2>
@@ -70,8 +68,11 @@
                 <li class="prev"><img src="icons/arrow/prew.svg" alt="prew"></li>
                 <li class="next"><img src="icons/arrow/next.svg" alt="next"></li>
             </ul>
+
             <div class="shop__wrapper-carousel">
-                <div class="shop__buy">
+
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.2s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -95,7 +96,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.4s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -119,7 +121,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.6s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -142,7 +145,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.8s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -165,7 +169,8 @@
                         <div class="shop__new-price">12.800₽</div>
                     </div>
                 </div>
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="1s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -202,8 +207,11 @@
                 <li class="prev"><img src="icons/arrow/prew.svg" alt="prew"></li>
                 <li class="next"><img src="icons/arrow/next.svg" alt="next"></li>
             </ul>
+
             <div class="shop__wrapper">
-                <div class="shop__buy">
+
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.2s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -227,7 +235,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.4s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -250,7 +259,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.6s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -273,7 +283,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="0.8s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -296,7 +307,8 @@
                     </div>
                 </div>
 
-                <div class="shop__buy">
+                <div class="shop__buy animate__fadeInRight animate__animated wow" data-wow-duration="1s"
+                    data-wow-delay="1s">
                     <div class="card-wrapper">
                         <div class="card-wrapper__card">
                             <div class="card-wrapper__front">
@@ -325,21 +337,120 @@
 
     <section class="fashion">
         <div class="container">
-            <div class="title">fashion — is my profession</div>
-            <div class="subtitle">Choose your best style</div>
-            <!-- <div class="fashion__photo-block">
-                <div class="fashion__column"><img class="fashion__photo fashion__photo_left-photo" src="img/fashoin/red-man.jpg" alt="girl"></div>
-                <div class="fashion__column">
-                    <img class="fashion__photo fashion__photo_up-photo" src="img/fashoin/fashion.jpg" alt="girl">
-                    <img class="fashion__photo fashion__photo_down-photo" src="img/fashoin/li2.jpg" alt="">
-                    <div class="fashion__style-text">Feel the style</div>
-                i</div>
-            </div> -->
-            <img src="img/bg/photo-style.jpeg" alt="" width="100%">
-
+            <h2 class="title">fashion — is my profession</h2>
+            <h3 class="subtitle">Choose your best style</h3>
+            <img src="img/bg/photo-style.jpeg" alt="collage-style">
         </div>
     </section>
+
+    <section class="reviews" id="id__reviews">
+        <div class="container">
+            <h2 class="title">отзывы клиентов</h2>
+
+            <div class="reviews__wrap animate__fadeInUpBig animate__animated wow">
+                <img class="reviews__img" src="img/reviews/client1.jpeg" alt="client" />
+                <div class="reviews__feedback">
+                    <div class="reviews__name">Сергей Бодров</div>
+                    <div class="reviews__text">
+                        Я узнал, что у меня 
+                        Есть свитеров целый ряд: 
+                        И в полоску, и с узором, 
+                        Есть с оленем, есть с фурором. 
+                        Цвета, стиль — всё на ура, 
+                        Каждый в мире свитер — дар! 
+                        Это всё моё, друзья! 
+                        Свитеров люблю всегда!<br/><br/>
+                        Сила в свитере!
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__wrap animate__fadeInUpBig animate__animated wow">
+                <img class="reviews__img" src="img/reviews/client2.jpeg" alt="client" />
+                <div class="reviews__feedback">
+                    <div class="reviews__name">Eлена Прекрасная</div>
+                    <div class="reviews__text">
+                        "Этот свитер — настоящая находка! Невероятно мягкий и тёплый, идеально подходит для осенних прогулок. Красивая текстура и глубокий цвет делают его стильным и универсальным элементом гардероба. Ношу его с удовольствием и получаю массу комплиментов!"
+                        <br /><br />
+                        Спасибо Sweaterliana
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="together">
+        <h2 class="title">collection for two</h2>
+        <div class="together__wrapper">
+            <h3 class="together__subtitle">Создайте атмосферу тепла и уюта с нашими парными свитерами! Идеально для зимних прогулок и праздников.</h3>
+            <div class="together__carousel">
+                <img class="together__img" src="img/together/women-men.jpeg" alt="">
+                <img class="together__img" src="img/together/men-women.jpg" alt="">
+            </div>
+            <button data-modal="consultation" class="button button_order">Заказать</button>
+        </div>
+   </section>
+
+   <section class="footer-title">
+    <h2 class="title">find us here</h2>
+   </section>
+
+   <footer class="footer" id="id__information">
+    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Add5fcfee84cb88f409f6d06b93eafb65e9f6cebe55eec1ea476818b86f13cb4e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+
+        <div class="footer__descr">
+            <div class="footer__brand">SweaterLyana</div>
+            <div class="footer__tagline">Стильные свитера и кардиганы, которые объединяют и согревают.</div>
+            <div class="footer__adress">
+                <a href="https://maps.app.goo.gl/xYz9uqMZb6tLfnz36">Казань Респ. Татарстан</a>
+            </div>
+            <div class="footer__email">
+                <a href="mailto:Sweaterliana@gmail.com">Sweaterliana@gmail.com</a>
+            </div>
+            
+            <div class="footer__social-media">
+                <a href="https://www.instagram.com/liana_chag/" target="_blank"><img src="icons/social/instagram.svg" alt="instagram"></a>
+
+                <a href="https://t.me/lianachag" target="_blank"><img src="icons/social/telegram.svg" alt="telegram"></a>
+
+                <a href="https://vk.com/public211505774" target="_blank"><img src="icons/social/vk.svg" alt="vk"></a>
+            </div>
+            <button data-modal="consultation" class="button button_social">
+                    заказать звонок
+            </button>
+        </div>
+   </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Просто заполните форму заявки</div>
+            <div class="modal__subtitle">
+                и мы вам перезвоним
+            </div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input required name="name" type="text" placeholder="Ваше имя" />
+                <input required name="phone" type="tel" placeholder="Ваш телефон" />
+                <input required name="email" type="email" placeholder="Ваш E-mail" />
+                <button class="button button_submit" >
+                    заказать звонок
+                </button>
+            </form>
+        </div>
+        
+        <div class="modal" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Спасибо за вашу заявку!</div>
+            <div class="modal__subtitle">
+                Наш менеджер свяжется с вами в ближайшее время!
+        </div>
+    </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.min.js" ></script>
     <script src="js/script.js"></script>
 </body>
 
