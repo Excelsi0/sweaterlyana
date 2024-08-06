@@ -1,0 +1,11 @@
+.policy__block {
+  padding: 4rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+}
+.policy__block h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}

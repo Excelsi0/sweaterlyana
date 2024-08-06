@@ -20,6 +20,11 @@
         transform: scale(1.05)
     &:active
         transform: scale(1)
+    &:disabled, &:hover:disabled
+        background-color: #818181
+        cursor: not-allowed
+        transform: scale(1)
+        color: #b0b0b0
 
     &_link
         text-decoration: none
